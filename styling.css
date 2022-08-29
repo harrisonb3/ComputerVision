@@ -1,0 +1,75 @@
+body {
+    color: black;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+/* Pose (agent pose) */
+#pose{
+    margin-top: -250px;
+    margin-bottom: -100px;
+    height: 100%;
+    width: 100%;
+}
+
+/* Speech-bubble */
+#speech-bubble {
+    position: absolute;
+    top: 22%;
+    left: 55%;
+    height: 20%;
+    width: 20%
+}
+
+/* Agent Dialogue */
+#dialogue-text {
+    position: absolute;
+    top: 30%;
+    left: 67.5%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+}
+
+/* Options black panel */
+#options {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    height: 15%;
+    width: 100%;
+    opacity: 20%;
+    display:none;
+}
+
+/* Text for user input */
+#user_input{
+    left: center;
+    width: 250px;
+    height: 20px;
+    display: none;
+}
+
+
+
+/* Divider between buttons */
+.space{
+    width: 4px;
+    height: auto;
+    display:inline-block;
+}
+
+
+button{
+    font-size: 16px;
+    /*display:none;*/
+}
+
+#button5{
+    /*display: none;*/
+}
+
