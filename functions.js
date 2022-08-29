@@ -59,6 +59,8 @@
 
     // Elemntal return
     function Return_to_Questions(){
+        document.getElementById("speech-bubble").hidden = false;
+        document.getElementById("dialogue-text").hidden = false;
         document.getElementById("button1").hidden = false;
         document.getElementById("button2").hidden = false;
         document.getElementById("button3").hidden = false;
@@ -92,18 +94,32 @@
     // Question 1
     function Question1() {
         disable_buttons();
-        document.getElementById("button1").hidden = false;
+        
         document.getElementById("return_button").hidden = false;
 
         change_pose("images/responding.png");
         dialogue_change("The Imaginarium is located in Heafey 237. You can find us by walking to the back of Heafey and going up the stairs.");
 
+        /*document.getElementById("button1").hidden = false;
         option_texts(["Map to Imaginarium"]);
         document.getElementById('button1').setAttribute('onclick','Map()');
+        */
+        document.getElementsById("return_button").setAttribute('onclick','Return_to_Questions()');
     }
 
     // MAP Button
-    // INSERT HERE
+    function Map(){
+        disable_buttons();
+        change_pose("images/map.png");
+        document.getElementById("speech-bubble").hidden = true;
+        document.getElementById("dialogue-text").hidden = true;
+
+        document.getElementById("return_button").hidden = false;
+        document.getElementsById("return_button").setAttribute('onclick','Question1_Map()');
+
+        document.getElementById("pose").style.marginTop = '0px';
+        document.getElementById("pose").style.marginBottom = '0px';
+    }
 
     // Question 2
     function Question2() {
@@ -138,7 +154,7 @@
         document.getElementById("return_button").hidden = false;
 
         change_pose("images/responding.png");
-        dialogue_change("You can contact the lab manager Emily Dang. Her contact is: //insert here ");
+        dialogue_change("You can contact the lab manager Emily Dang. Her contact is: edang1@scu.edu");
     }
 
     // Question 6
@@ -147,7 +163,7 @@
         document.getElementById("return_button").hidden = false;
 
         change_pose("images/responding.png");
-        dialogue_change("If you are a member of SCU with an individual project, you are welcome to visit the Wave+Imaginarium during open hours to work on your project. If you are SCU faculty seeking out space, equipment, or student workers for a project, please contact Emily Dang and David Jeong with your questions.");
+        dialogue_change("If you are a member of SCU with an individual project, you are welcome to visit the Wave+Imaginarium during open hours to work on your project. If you are SCU faculty seeking out space, equipment, or student workers for a project, please contact Emily Dang (edang1@scu.edu) and David Jeong (dcjeong@scu.edu) with your questions.");
     }
 
     // Question 7
@@ -156,7 +172,7 @@
         document.getElementById("return_button").hidden = false;
 
         change_pose("images/responding.png");
-        dialogue_change("Please contact Emily Dang or David Jeong for further questions");
+        dialogue_change("Please contact Emily Dang (edang1@scu.edu) or David Jeong (dcjeong@scu.edu) for further questions");
     }
 
     // Question 8
